@@ -7,6 +7,70 @@
         "normal": "http://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png",
         "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
       }
+    },
+    {
+      "id": "2",
+      "name": "ivysaur",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/ivysaur.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif"
+      }
+    },
+    {
+      "id": "3",
+      "name": "venusaur",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/venusaur.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif"
+      }
+    },
+    {
+      "id": "4",
+      "name": "charmander",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/charmander.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif"
+      }
+    },
+    {
+      "id": "5",
+      "name": "charmeleon",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/charmeleon.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif"
+      }
+    },
+    {
+      "id": "6",
+      "name": "charizard",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/charizard.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif"
+      }
+    },
+    {
+      "id": "7",
+      "name": "squirtle",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/squirtle.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif"
+      }
+    },
+    {
+      "id": "8",
+      "name": "wartortle",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/wartortle.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif"
+      }
+    },
+    {
+      "id": "9",
+      "name": "blastoise",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/blastoise.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif"
+      }
     }
   ]
 }
