@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 db.defaults({ pokemons: [] }).write();
 
-// GET - List all Pokemon
+// GET - List of all the Pokemon
 app.get('/pokemon', (req, res) => {
   const pokemons = db.get('pokemons').value();
   res.json(pokemons);
@@ -22,12 +22,11 @@ app.get('/pokemon', (req, res) => {
 
 // POST - Add a new Pokemon
 app.post('/pokemon', (req, res) => {
+  const newPokemon = { id: Date.now().toString(), ...req.body };
   db.get('pokemons')
-    .push(req.body)
-    .last()
-    .assign({ id: Date.now().toString() }) // Assign a unique id to the new Pokemon
+    .push(newPokemon)
     .write();
-  res.status(201).json(req.body);
+  res.status(201).json(newPokemon);
 });
 
 // GET - Get a specific Pokemon by name
@@ -46,21 +45,15 @@ app.put('/pokemon/:name', (req, res) => {
     .find({ name: req.params.name })
     .assign(req.body)
     .write();
-  if (updatedPokemon) {
-    res.json(updatedPokemon);
-  } else {
-    res.status(404).send('Pokemon not found');
-  }
+  res.json(updatedPokemon);
 });
 
 // DELETE - Remove a specific Pokemon
 app.delete('/pokemon/:name', (req, res) => {
-  const pokemon = db.get('pokemons').remove({ name: req.params.name }).write();
-  if (pokemon.length > 0) {
-    res.status(204).send();
-  } else {
-    res.status(404).send('Pokemon not found');
-  }
+  const pokemon = db.get('pokemons')
+    .remove({ name: req.params.name })
+    .write();
+  res.status(204).send();
 });
 
 app.listen(PORT, () => {

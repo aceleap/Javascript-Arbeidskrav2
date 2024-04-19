@@ -1,13 +1,12 @@
 {
-    "pokemons": [
-      {
-        "id": "1",
-        "name": "bulbasaur",
-        "sprites": {
-          "normal": "http://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png",
-          "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
-        }
+  "pokemons": [
+    {
+      "id": "1",
+      "name": "bulbasaur",
+      "sprites": {
+        "normal": "http://img.pokemondb.net/sprites/black-white/normal/bulbasaur.png",
+        "animated": "http://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif"
       }
-    ]
-  }
-  
+    }
+  ]
+}
