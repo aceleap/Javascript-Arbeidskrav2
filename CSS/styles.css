@@ -64,3 +64,28 @@ footer {
   transform: scale(1.5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#reset-pokemon {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  padding: 50px 50px;
+  background-color: #d30723;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#reset-pokemon:hover {
+  background-color: #a00d22;
+  transform: scale(1.1);
+}
+
+#reset-pokemon:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #dc0d29;
+}

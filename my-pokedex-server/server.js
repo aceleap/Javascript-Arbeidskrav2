@@ -5,7 +5,7 @@ const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 
 const app = express();
-const adapter = new FileSync("db.json"); // The database file
+const adapter = new FileSync("db.json"); // Database
 const db = low(adapter);
 const PORT = process.env.PORT || 3000;
 
@@ -14,20 +14,20 @@ app.use(bodyParser.json());
 
 db.defaults({ pokemons: [] }).write();
 
-// GET - List of all the Pokemon
+// GET
 app.get("/pokemon", (req, res) => {
   const pokemons = db.get("pokemons").value();
   res.json(pokemons);
 });
 
-// POST - Add a new Pokemon
+// POST
 app.post("/pokemon", (req, res) => {
   const newPokemon = { id: Date.now().toString(), ...req.body };
   db.get("pokemons").push(newPokemon).write();
   res.status(201).json(newPokemon);
 });
 
-// GET - Get a specific Pokemon by name
+// GET
 app.get("/pokemon/:name", (req, res) => {
   const pokemon = db.get("pokemons").find({ name: req.params.name }).value();
   if (pokemon) {
@@ -37,7 +37,7 @@ app.get("/pokemon/:name", (req, res) => {
   }
 });
 
-// PUT - Update a specific Pokemon
+// PUT
 app.put("/pokemon/:name", (req, res) => {
   const updatedPokemon = db
     .get("pokemons")
@@ -47,7 +47,7 @@ app.put("/pokemon/:name", (req, res) => {
   res.json(updatedPokemon);
 });
 
-// DELETE - Remove a specific Pokemon
+// DELETE
 app.delete("/pokemon/:name", (req, res) => {
   const pokemon = db.get("pokemons").remove({ name: req.params.name }).write();
   res.status(204).send();
